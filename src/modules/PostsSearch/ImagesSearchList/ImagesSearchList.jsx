@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styles from "./images-search-list.module.scss";
 
 const ImagesSearchList = ({items, showPost})=> {
@@ -5,7 +6,7 @@ const ImagesSearchList = ({items, showPost})=> {
         const elements = items.map(({ id, webformatURL, largeImageURL}) => <li onClick={()=> showPost({webformatURL, largeImageURL})} key={id} className={styles.item}>
                                                                 <img src={webformatURL} alt="" className={styles.card}/>
                                                             </li>);
-    // console.log(elements);
+    console.log(elements);
     return (
         <ul className={styles.list}>
             {elements}
@@ -13,7 +14,7 @@ const ImagesSearchList = ({items, showPost})=> {
     )
 }
 
-export default ImagesSearchList;
+export default memo(ImagesSearchList);
 
 ImagesSearchList.defaultProps = {
     items: []
