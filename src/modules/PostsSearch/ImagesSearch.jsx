@@ -38,7 +38,7 @@ const ImagesSearch = () => {
         }
         fetchImages();
 
-    }, [search, page, setLoading, setItems, setError, setLoading, searchImages])
+    }, [search, page, setLoading, setItems, setError])
 
     const onSearchImages = useCallback(({ search }) => {
         setSearch(search);

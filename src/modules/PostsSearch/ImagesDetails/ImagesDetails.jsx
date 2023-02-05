@@ -1,4 +1,3 @@
-import styles from "./images-details.module.scss";
 
 const ImagesDetails = ({largeImageURL}) => {
     return (
